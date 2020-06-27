@@ -40,7 +40,7 @@ class Game {
   }
 
   checkBounds(pos){
-    if (pos[1] < -50 || pos[1] > 690){
+    if (pos[1] < -150 || pos[1] > 690){
       this.inPlay = false;
     }
   }
