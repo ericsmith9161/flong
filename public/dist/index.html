@@ -1,0 +1,38 @@
+<html>
+
+<head>
+  <title>Flappy Pong</title>
+  <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../dist/main.css">
+  <script type="application/javascript" src="../dist/main.js"></script>
+
+</head>
+
+<body class="the-page">
+  <div class="head">
+    <div class="logo">
+      <img src="../assets/images/flappy.png"/>
+      <img src="../assets/images/pong.png"/>
+    </div>
+  </div>
+
+  <canvas id="mycanvas" height="640" width="960" >
+  </canvas>
+  <div style="display:none;">
+    <img id="flappy-bird" src="../assets/images/flappybird.png" width="100" height="100">
+  </div>
+  <button class="start-btn"></button>
+  <form class ="name-form">
+    <input type="text" class="name-input hidden" value="" placeholder="Enter your name">
+  </form>
+
+  <button class="play-again-btn hidden">Play Again</button>
+  <div class="scoreboard hidden">
+    <div class="score-content">
+      <span>All Time High Scores</span>
+    </div>
+  </div>
+
+</body>
+
+</html>
