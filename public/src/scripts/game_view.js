@@ -17,7 +17,7 @@ class GameView{
     this.bgiY = 0;
 
     this.bgm = new Sound("../../assets/sounds/flappypongbgm.mp3");
-    this.bgm.sound.volume = .15;
+    this.bgm.sound.volume = .8;
     this.bgm.sound.classList.add("background-music");
 
     this.gom = new Sound("../../assets/sounds/flappygameover.mp3");

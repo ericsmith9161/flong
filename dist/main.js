@@ -2420,7 +2420,7 @@ var GameView = /*#__PURE__*/function () {
     this.bgiX = 0;
     this.bgiY = 0;
     this.bgm = new _sound__WEBPACK_IMPORTED_MODULE_1__["default"]("../../assets/sounds/bgm.mp3");
-    this.bgm.sound.volume = .15;
+    this.bgm.sound.volume = .7;
     this.bgm.sound.classList.add("background-music");
     this.gom = new _sound__WEBPACK_IMPORTED_MODULE_1__["default"]("../../assets/sounds/gameover.mp3");
     this.gom.sound.volume = .15;

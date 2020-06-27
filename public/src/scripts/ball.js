@@ -4,8 +4,10 @@ class Ball{
   constructor(pos) {
     this.pos = pos;
     this.vel = [-4,0];
-    this.radius = 15;
+    this.radius = 35;
     this.altered = false;
+    this.cliff = document.getElementById("cliff-mouth");
+
   }
 
   draw(ctx){
@@ -13,10 +15,12 @@ class Ball{
     let y = this.pos[1];
     let r = this.radius;
 
-    ctx.beginPath();
-    ctx.arc(x, y, r, 0, 2 * Math.PI);
-    ctx.fillStyle = "#ffffff";
-    ctx.fill();
+    ctx.drawImage(this.cliff, x - r/2, y - r/2, r, r)
+
+    // ctx.beginPath();
+    // ctx.arc(x, y, r, 0, 2 * Math.PI);
+    // ctx.fillStyle = "#ffffff";
+    // ctx.fill();
   }
 
   collide(obj){
@@ -25,8 +29,8 @@ class Ball{
     const relativeIntersectY = (obj.pos[1]+(obj.height/2) - this.pos[1]);
     const normalizedRelativeIntersectionY = (relativeIntersectY / (obj.height/2));
     const bounceAngle = normalizedRelativeIntersectionY * MAXBOUNCEANGLE;
-    const newVx = Math.max(4,1.05*BALLSPEED * Math.cos(bounceAngle));
-    const newVy = Math.max(4,1.05*BALLSPEED * -Math.sin(bounceAngle));
+    let newVx = Math.max(4,1.05*BALLSPEED * Math.cos(bounceAngle));
+    let newVy = Math.max(4,1.05*BALLSPEED * -Math.sin(bounceAngle));
 
     if (obj.pos[0] === 0) {
       this.vel = [newVx, newVy];
