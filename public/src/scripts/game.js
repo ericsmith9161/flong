@@ -22,6 +22,21 @@ class Game {
 
     this.pong = new Sound("../../assets/sounds/ballbounce.mp3");
     this.pong.sound.volume = .3;
+
+    this.ks = new Sound("../../assets/sounds/killingspree.wav");
+    this.ks.sound.volume = .6;
+
+    this.rp = new Sound("../../assets/sounds/rampage.wav");
+    this.ks.sound.volume = .6;
+
+    this.do = new Sound("../../assets/sounds/dominating.wav");
+    this.ks.sound.volume = .6;
+
+    this.us = new Sound("../../assets/sounds/unstoppable.wav");
+    this.ks.sound.volume = .6;
+
+    this.gl = new Sound("../../assets/sounds/godlike.wav");
+    this.ks.sound.volume = .6;
   }
 
   checkBounds(pos){
@@ -59,6 +74,20 @@ class Game {
         this.pong.sound.currentTime = 0;
         this.pong.play();
         this.score.score += 1;
+        switch(this.score.score){
+          case 5:
+            this.ks.play();
+            break
+          case 10:
+            this.rp.play();
+            break 
+          case 15:
+            this.do.play();
+          case 20:
+            this.us.play();
+          case 25:
+            this.gl.play();
+        }
         this.ball.collide(this.player);
         if (this.player.height > 30) {
           this.player.height -= 2;
