@@ -83,10 +83,13 @@ class Game {
             break 
           case 15:
             this.do.play();
+            break
           case 20:
             this.us.play();
+            break
           case 25:
             this.gl.play();
+            break
         }
         this.ball.collide(this.player);
         if (this.player.height > 30) {
