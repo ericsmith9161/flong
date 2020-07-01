@@ -15,7 +15,7 @@ class Ball{
     let y = this.pos[1];
     let r = this.radius;
 
-    ctx.drawImage(this.cliff, x - r/2, y - r/2, r, r)
+    ctx.drawImage(this.cliff, x - r/2, y - r/2, 2*r, 2*r)
 
     // ctx.beginPath();
     // ctx.arc(x, y, r, 0, 2 * Math.PI);
